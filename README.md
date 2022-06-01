@@ -1,4 +1,4 @@
-# formula1-championship-status
+# f1-championship-status
 
 ## Project setup
 ```

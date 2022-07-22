@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import DriverCard from "@/components/DriverCard/DriverCard.vue";
+import DriverCard from '@/components/DriverCard/DriverCard.vue';
+
 export default {
   components: {
     DriverCard,

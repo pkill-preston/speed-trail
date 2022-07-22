@@ -1,6 +1,6 @@
 <template>
-<div class="frame card">
-  <div className="frame image">
+  <div class="frame card">
+    <div className="frame image">
       <h1 className="text short">LEC16</h1>
       <img className="driver" alt="" />
       <h1 className="text standing">1</h1>
@@ -11,28 +11,28 @@
         <img className="flag" src="https://hotemoji.com/images/emoji/q/iyemnexgoqfq.png" alt="" />
       </div>
       <div className="information">
-        <h1 className="text info"></h1>
-        <h1 className="text info"></h1>
-        <h1 className="text info"></h1>
-        <h1 className="text info"></h1>
+        <h1 className="text info">1</h1>
+        <h1 className="text info">2</h1>
+        <h1 className="text info">3</h1>
+        <h1 className="text info">4</h1>
       </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-  export default {
-    props:{
-      short: String,
-      driverImage: String,
-      position: Number,
-      name: String,
-      points: Number,
-      podiums: Number,
-      Poles: Number,
-      Wins: Number,
-    }
-  }
+export default {
+  props: {
+    short: String,
+    driverImage: String,
+    position: Number,
+    name: String,
+    points: Number,
+    podiums: Number,
+    Poles: Number,
+    Wins: Number,
+  },
+};
 </script>
 
 <style scoped>

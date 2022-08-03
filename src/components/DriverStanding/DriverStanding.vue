@@ -1,45 +1,16 @@
 <template>
   <div class="container">
-    <div class="major">
-      <div class="first big card">
-        <div class="driver">
-          <img src="../../assets/driver.png" class="frame major" alt="">
-        </div>
-        <div class="status">
-          <h1 class="position text">1</h1>
-          <h1 class="points text">125</h1>
-          <img src="../../assets/logo.png" alt="" class="constructor">
-        </div>
-      </div>
-    </div>
-    <div class="minor">
-      <div class="second small card">
-        <div class="driver">
-          <img src="../../assets/driver.png" class="frame minor" alt="">
-        </div>
-        <div class="status">
-          <h1 class="position text">2</h1>
-          <h1 class="points text">116</h1>
-          <img src="../../assets/logo.png" alt="" class="constructor">
-        </div>
-      </div>
-      <div class="third small card">
-        <div class="driver">
-          <img src="../../assets/driver.png" class="frame minor" alt="">
-        </div>
-        <div class="status">
-          <h1 class="position text">3</h1>
-          <h1 class="points text">110</h1>
-          <img src="../../assets/logo.png" alt="" class="constructor">
-        </div>
-      </div>
-    </div>
+    <PodiumStanding v-for="index in 3" :class="`${index}`" :key="index">
+      here is {{ $.index }}
+    </PodiumStanding>
   </div>
 </template>
 
 <script>
-export default {
+import PodiumStanding from '../PodiumStanding/PodiumStanding.vue';
 
+export default {
+  components: { PodiumStanding },
 };
 </script>
 
@@ -58,11 +29,11 @@ export default {
   width: 100%;
   background-color: #D9D9D9;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   max-height: 40rem;
   height: 100%;
-  padding: 3rem;
+  padding: 1rem 0;
 }
 
 .major {
@@ -73,11 +44,11 @@ export default {
 }
 
 .minor {
-  max-width: 24rem;
+  max-width: 25rem;
   display: flex;
   width: 100%;
   height: 100%;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -92,10 +63,11 @@ export default {
   border: solid 2px transparent;
   background-clip: padding-box;
   box-shadow: 10px 10px 10px rgb(0 0 0 / 45%);
+  border-bottom: 0;
 }
 
 .small.card {
-  max-width: 25rem;
+  max-width: 23rem;
 }
 
 .text {
@@ -138,7 +110,15 @@ export default {
   max-height: 1rem;
 }
 
-.small.second {
-  margin-bottom: 2rem;
+.position.big {
+  font-size: 4em;
+}
+
+.position.small {
+  font-size: 2.em;
+}
+
+.points.big {
+  font-size: 3em;
 }
 </style>

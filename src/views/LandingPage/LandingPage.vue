@@ -1,18 +1,23 @@
 <template>
-  <div>
-    <DriverCard :name="Alonso" />
+  <div class="content">
+    <PodiumHall />
   </div>
 </template>
 
 <script>
-import DriverCard from '@/components/DriverCard/DriverCard.vue';
+import PodiumHall from '@/components/PodiumHall/PodiumHall.vue';
 
 export default {
   components: {
-    DriverCard,
+    PodiumHall,
   },
 };
 </script>
 
 <style scoped>
+.content {
+  max-width: 64rem;
+  width: 100%;
+  background-color: red;
+}
 </style>

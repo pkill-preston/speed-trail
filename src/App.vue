@@ -1,6 +1,8 @@
 <template>
-  <NavigationBar/>
-  <router-view/>
+  <NavigationBar />
+  <div class="feed">
+    <router-view />
+  </div>
 </template>
 
 <script>
@@ -15,6 +17,10 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: Formula;
+  src: url('./assets/fonts/Formula1-Regular_web_0.ttf');
+}
 body{
   margin:0;
   padding: 0;
@@ -27,5 +33,10 @@ body{
   text-align: center;
   color: #2c3e50;
   margin: 0px;
+}
+.feed {
+  width: 100%;
+  display: flex;
+  justify-content: center
 }
 </style>

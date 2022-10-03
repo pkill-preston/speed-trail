@@ -2,9 +2,10 @@ import instance from '@/services';
 
 const actions = {
   getDriverStandings: ({ commit }) => {
-    instance.get('/rankings/drivers', { params: { season: '2022' } })
+    instance.get('/races', { params: { type: 'race', season: '2022' } })
       .then((response) => {
-        commit('setPodiumPositions', response.data.response);
+        console.log(response.data);
+        commit('setPodiumPositions', response.data);
       });
   },
 };

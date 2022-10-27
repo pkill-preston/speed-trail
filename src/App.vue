@@ -3,14 +3,17 @@
   <div class="feed">
     <router-view />
   </div>
+  <PageFooter/>
 </template>
 
 <script>
+import PageFooter from '@/components/PageFooter/PageFooter.vue';
 import NavigationBar from './components/NavigationBar/NavigationBar.vue';
 
 export default {
   name: 'App',
   components: {
+    PageFooter,
     NavigationBar,
   },
 };
@@ -24,7 +27,7 @@ export default {
 body{
   margin:0;
   padding: 0;
-  background: #313131;
+  background: #6a6a6a;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -36,7 +39,9 @@ body{
 }
 .feed {
   width: 100%;
+  justify-content: center;
   display: flex;
-  justify-content: center
+  flex-direction: column;
+  align-items: center;
 }
 </style>

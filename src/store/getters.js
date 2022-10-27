@@ -1,7 +1,7 @@
 const getters = {
   getDriverPodium: (state) => {
-    state.podiumPositions.slice(0, 3);
-    console.log(state.podiumPositions);
+    const podium = state.driverPodiumPositions[0].slice(0, 3);
+    return podium;
   },
 };
 

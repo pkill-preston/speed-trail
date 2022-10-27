@@ -1,9 +1,9 @@
 import { createStore } from 'vuex';
 import VuexPersistence from 'vuex-persist';
 
-import actions from './actions';
-import mutations from './mutations';
-import getters from './getters';
+import actions from '@/store/actions';
+import mutations from '@/store/mutations';
+import getters from '@/store/getters';
 
 const vuexLocal = new VuexPersistence({
   storage: window.localStorage,
@@ -11,7 +11,10 @@ const vuexLocal = new VuexPersistence({
 
 export default createStore({
   state: {
-    podiumPositions: [],
+    complement: ['st', 'nd', 'rd'],
+    driverPodiumPositions: [],
+    driverStandings: [],
+    constructorStandings: [],
   },
   getters,
   mutations,
